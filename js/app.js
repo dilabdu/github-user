@@ -19,7 +19,7 @@ const modeLocal = localStorage.getItem("mode");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const userName = form.user_name.value.trim().toLowerCase();
-  const url = `http://api.github.com/users/${userName}`;
+  const url = `https://api.github.com/users/${userName}`;
   request(url).then((user) => {
     console.log(user);
     const {
